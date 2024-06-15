@@ -1,6 +1,12 @@
 from selenium.common.exceptions import NoSuchElementException
 from pages.base_page import BasePage
 
+"""
+В файле swag_labs.py создан класс SwagLabs.
+Это файл из домашнего задания №6. В домашнем задании №7 мы его большне не исользуем.
+Возможно, в будущем, нужно будет удалить его из проекта. Но пока что оставлю его.
+"""
+
 
 class SwagLabs(BasePage):
 

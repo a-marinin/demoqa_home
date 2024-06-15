@@ -1,6 +1,14 @@
 from pages.base_page import BasePage
 from components.components import WebElement
 
+"""
+В файле base_page.py создан класс DemoQa - это домашняя страница нашего сайта (demoqa.com).
+Класс DemoQa наследуется от родительского класс BasePage. 
+В классе DemoQa описаны web-элементы (и их CSS-локаторы), находящиеся только на этой странице:
+    1. text_footer - Это текст, находящийся в футере домашней страницы.
+    2. btn_elements - Это кнопка "Elements", ведущая на страницу demoqa.com/elements 
+"""
+
 
 class DemoQa(BasePage):
 
