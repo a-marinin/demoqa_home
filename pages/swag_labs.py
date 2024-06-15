@@ -1,5 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 from pages.base_page import BasePage
+from components.components import WebElement
+
 
 class SwagLabs(BasePage):
 
@@ -26,3 +28,7 @@ class SwagLabs(BasePage):
         except NoSuchElementException:
             return False
         return True
+
+    # def footer_text(self):  # Проверяем тест в футере
+    #     try:
+    #         self.find_element(locator='')

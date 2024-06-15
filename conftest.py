@@ -8,4 +8,3 @@ def browser():
     driver = webdriver.Chrome()  # Передали наш драйвер
     yield driver  # Чтобы наш драйвер мог использовать в функции
     driver.quit()  # Закрываем драйвер
-    
