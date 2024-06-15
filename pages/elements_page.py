@@ -8,5 +8,4 @@ class ElementsPage(BasePage):
         self.base_url = 'https://demoqa.com/elements'
         super().__init__(driver, self.base_url)
 
-        # self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
         self.text_center = WebElement(driver, '#app > div > div > div > div.col-12.mt-4.col-md-6')

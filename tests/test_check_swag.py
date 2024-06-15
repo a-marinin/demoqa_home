@@ -1,5 +1,4 @@
 # from pages.swag_labs import SwagLabs
-# import time
 #
 #
 # def test_check_icon(browser):
