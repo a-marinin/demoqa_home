@@ -41,3 +41,6 @@ class WebElement:
     def get_text(self):
         # Получение текста элемента.
         return self.find_element().text
+
+    def visible(self):
+        return self.find_element().is_displayed()
