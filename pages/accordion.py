@@ -12,3 +12,6 @@ class AccordionPage(BasePage):
 
         # Текст, содержащийся в 1-м аккордеоне "What is Lorem Ipsum?" на странице demoqa.com/accordian
         self.text_what_is_lorem_ipsum = WebElement(driver, '#section1Content > p')
+
+        # Карта "What is Lorem Ipsum?". Её нажатие скорачивает/разворачивает аккордион.
+        self.card_what_is_lorem_ipsum = WebElement(driver, '#section1Heading')
