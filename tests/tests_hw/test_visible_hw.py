@@ -1,9 +1,7 @@
-# from pages.demoqa import DemoQa
-# from pages.elements_page import ElementsPage
 from pages.accordion import AccordionPage
 import time
 
-# Тест-файл домашнего задания №8.
+''' 1й тест-файл с текст кейсами из домашнего задания №8. '''
 
 
 def test_visible_accordion(browser):
