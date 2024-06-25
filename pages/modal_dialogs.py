@@ -15,3 +15,6 @@ class ModalDialogsPage(BasePage):
 
         # not_unique_btn - это элемент с не уникальным локатором, подходящим под все кнопки
         self.btn_not_unique = WebElement(driver, '.btn, btn-light ')  # 35 Элементов на странице
+
+        # icon_home_page - это элемент иконки, ведущий на главную страницу сайта demoqa.com
+        self.icon_home_page = WebElement(driver, '#app > header > a')
