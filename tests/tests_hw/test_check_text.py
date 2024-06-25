@@ -1,6 +1,8 @@
 from pages.demoqa import DemoQa
 from pages.elements_page import ElementsPage
 
+''' Тест-файл с тест кейсам из домашнего задания №7. '''
+
 
 def test_check_footer_text(browser):
     # Проверка текста в футере на главной странице сайте demoqa.com

@@ -27,8 +27,12 @@ class WebElement:
         self.find_element().click()
 
     def find_element(self):
-        # Найти элемент.
+        # Найти один конкретный элемент по уникальному локатору.
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def find_elements(self):
+        # Найти несколько элементов по не уникальному локатору.
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
     def exist(self):
         # Проверка на то, существует ли элемент.
@@ -44,3 +48,11 @@ class WebElement:
 
     def visible(self):
         return self.find_element().is_displayed()
+
+    def check_count_elements(self, count: int) -> bool:
+        if len(self.find_elements()) == count:
+            return True
+        return False
+
+    def send_keys(self, text: str):
+        self.find_element().send_keys(text)
