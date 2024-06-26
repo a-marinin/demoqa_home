@@ -18,7 +18,7 @@ from selenium.webdriver.common.keys import Keys
 
 
 class WebElement:
-    def __init__(self, driver, locator='', locator_type='css'):
+    def __init__(self, driver, locator='', locator_type="css"):
         self.driver = driver
         self.locator = locator
         self.locator_type = locator_type
@@ -33,11 +33,13 @@ class WebElement:
 
     def find_element(self):
         # Найти один конкретный элемент по уникальному локатору.
-        return self.driver.find_element(self.get_by_type(), self.locator)
+        return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+        #return self.driver.find_element(self.get_by_type(), self.locator)  # не работает
 
     def find_elements(self):
         # Найти несколько элементов по не уникальному локатору.
-        return self.driver.find_elements(self.get_by_type(), self.locator)
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
+        #return self.driver.find_elements(self.get_by_type(), self.locator)  # не работает
 
     def exist(self):
         # Проверка на то, существует ли элемент.
