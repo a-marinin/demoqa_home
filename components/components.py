@@ -43,10 +43,6 @@ class WebElement:
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
         #return self.driver.find_elements(self.get_by_type(), self.locator)  # не работает
 
-    # """ Тестовый метод для ДЗ №10 """
-    # def find_element_by_text(self):
-    #     return self.driver.find_element(By.LINK_TEXT, self.locator)
-
     def exist(self):
         # Проверка на то, существует ли элемент.
         try:
@@ -61,10 +57,6 @@ class WebElement:
 
     def visible(self):
         return self.find_element().is_displayed()
-
-    ''' Тестовый метод для ДЗ № 10 '''
-    def visible_by_text(self):
-        return self.find_element_by_text().is_displayed()
 
     def check_count_elements(self, count: int) -> bool:
         if len(self.find_elements()) == count:
@@ -114,15 +106,3 @@ class WebElement:
         else:
             print("Locator type " + self.locator_type + " not correct.")
         return False  # Если ни одно из перечисленных выше условий не пройдёт
-
-    # def get_attribute(self):
-    #     """ 1й тестовый метод для дополнительного задания к ДЗ № 10 """
-    #     self.find_element().get_attribute('innerHTML')
-    #
-    # def get_attribute2(self):
-    #     """ 2й тестовый метод для дополнительного задания к ДЗ № 10 """
-    #     self.find_element().get_attribute('outerHTML')
-    #
-    # def get_html_code(self):
-    #     """ 3й тестовый метод для дополнительного задания к ДЗ № 10 """
-    #     self.driver.page_source()
