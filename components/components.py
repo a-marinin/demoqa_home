@@ -2,6 +2,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
+from selenium import webdriver  # TEMP!!!
+
 """
 В файл components.py вынесены однотипные действия с веб-элементами.
 Класс WebElement не наследуется!
@@ -29,7 +31,7 @@ class WebElement:
 
     def click_force(self):
         # Принудительный клик по элементу.
-        self.driver.execute_script("arguments[0].click();", self.find_elements())
+        self.driver.execute_script("arguments[0].click();", self.find_element())
 
     def find_element(self):
         # Найти один конкретный элемент по уникальному локатору.
@@ -40,6 +42,10 @@ class WebElement:
         # Найти несколько элементов по не уникальному локатору.
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
         #return self.driver.find_elements(self.get_by_type(), self.locator)  # не работает
+
+    # """ Тестовый метод для ДЗ №10 """
+    # def find_element_by_text(self):
+    #     return self.driver.find_element(By.LINK_TEXT, self.locator)
 
     def exist(self):
         # Проверка на то, существует ли элемент.
@@ -55,6 +61,10 @@ class WebElement:
 
     def visible(self):
         return self.find_element().is_displayed()
+
+    ''' Тестовый метод для ДЗ № 10 '''
+    def visible_by_text(self):
+        return self.find_element_by_text().is_displayed()
 
     def check_count_elements(self, count: int) -> bool:
         if len(self.find_elements()) == count:
@@ -84,7 +94,7 @@ class WebElement:
         # Прокрутка страницы до любого элемента
         self.driver.execute_script(
             "windows.scrollTo(0, document.body.scrollHeight);",
-            self.find_element()
+            self.find_element().get_attibute('outerHTML')
         )
 
     def get_by_type(self):
@@ -104,3 +114,15 @@ class WebElement:
         else:
             print("Locator type " + self.locator_type + " not correct.")
         return False  # Если ни одно из перечисленных выше условий не пройдёт
+
+    # def get_attribute(self):
+    #     """ 1й тестовый метод для дополнительного задания к ДЗ № 10 """
+    #     self.find_element().get_attribute('innerHTML')
+    #
+    # def get_attribute2(self):
+    #     """ 2й тестовый метод для дополнительного задания к ДЗ № 10 """
+    #     self.find_element().get_attribute('outerHTML')
+    #
+    # def get_html_code(self):
+    #     """ 3й тестовый метод для дополнительного задания к ДЗ № 10 """
+    #     self.driver.page_source()
