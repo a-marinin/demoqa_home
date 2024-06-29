@@ -36,12 +36,12 @@ class WebElement:
     def find_element(self):
         # Найти один конкретный элемент по уникальному локатору.
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
-        #return self.driver.find_element(self.get_by_type(), self.locator)  # не работает
+        # return self.driver.find_element(self.get_by_type(), self.locator)  # не работает
 
     def find_elements(self):
         # Найти несколько элементов по не уникальному локатору.
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
-        #return self.driver.find_elements(self.get_by_type(), self.locator)  # не работает
+        # return self.driver.find_elements(self.get_by_type(), self.locator)  # не работает
 
     def exist(self):
         # Проверка на то, существует ли элемент.
@@ -69,7 +69,8 @@ class WebElement:
 
     def clear(self):
         # Очистить поле
-        self.find_element().send_keys(Keys.CONTROL + 'a')
+        self.find_element().send_keys(Keys.COMMAND + 'a')  # On MAC OS
+        # self.find_element().send_keys(Keys.CONTROL + 'a')  # On Windows OS
         self.find_element().send_keys(Keys.DELETE)
 
     def get_dom_attribute(self, name: str):
