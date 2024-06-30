@@ -18,3 +18,17 @@ class ModalDialogsPage(BasePage):
 
         # icon_home_page - это элемент иконки, ведущий на главную страницу сайта demoqa.com
         self.icon_home_page = WebElement(driver, '#app > header > a')
+
+        """ Локаторы для домашнего задания №12 """
+        self.modal_windows = WebElement(driver, 'div.fade.modal.show > div > div')
+
+        # Кнопки открытия модальных окон:
+        self.btn_small_modal = WebElement(driver, '#showSmallModal')
+        self.btn_large_modal = WebElement(driver, '#showLargeModal')
+        # Кнопки закрытия модальных окон:
+        self.btn_close_small_modal = WebElement(driver, '#closeSmallModal')
+        self.btn_close_large_modal = WebElement(driver, '#closeLargeModal')
+        # Заголовки модальных окон:
+        self.title_small_modal = WebElement(driver, '#example-modal-sizes-title-sm')
+        self.title_large_modal = WebElement(driver, '#example-modal-sizes-title-lg')
+
