@@ -59,3 +59,37 @@ class WebTablesPage(BasePage):
 
         # Поля для ввода номера страницы "Jump to page"
         self.field_jump_to_page = WebElement(driver, 'div > input[type=number]')
+
+        """ Элементы для домашнего задания № 12 """
+        # Элементы для базовой проверки по классу элемента
+        self.col_1 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(1)')  # First name col
+        self.col_2 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(2)')  # Last name col
+        self.col_3 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(3)')  # Age col
+        self.col_4 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(4)')  # Email col
+        self.col_5 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(5)')  # Salary col
+        self.col_6 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(6)')  # Departament col
+
+        # # Элементы для дополнительной проверки на значения.
+        # # Элементы 1-й строки
+        # self.row_1_first_name = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(1)')
+        # self.row_1_last_name = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(2)')
+        # self.row_1_age = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(3)')
+        # self.row_1_email = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(4)')
+        # self.row_1_salary = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(5)')
+        # self.row_1_departament = WebElement(driver, 'div.rt-tbody > div:nth-child(1) > div > div:nth-child(6)')
+        #
+        # # Элементы 2-й строки
+        # self.row_2_first_name = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(1)')
+        # self.row_2_last_name = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(2)')
+        # self.row_2_age = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(3)')
+        # self.row_2_email = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(4)')
+        # self.row_2_salary = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(5)')
+        # self.row_2_departament = WebElement(driver, 'div.rt-tbody > div:nth-child(2) > div > div:nth-child(6)')
+        #
+        # # Элементы 3-й строки
+        # self.row_3_first_name = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(1)')
+        # self.row_3_last_name = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(2)')
+        # self.row_3_age = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(3)')
+        # self.row_3_email = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(4)')
+        # self.row_3_salary = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(5)')
+        # self.row_3_departament = WebElement(driver, 'div.rt-tbody > div:nth-child(3) > div > div:nth-child(6)')
