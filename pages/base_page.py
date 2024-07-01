@@ -1,3 +1,5 @@
+import logging
+
 """
 В файл base_page.py вынесены однотипные действия, которые мы можем совершать с web-страницей.
 Класс BasePage является родительским классом для всех наших web-страниц.
@@ -50,3 +52,11 @@ class BasePage:
     def get_title(self):
         # Получить title страницы.
         return self.driver.title
+
+    def alert(self):
+        # Метод, возвращающий alert
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False
