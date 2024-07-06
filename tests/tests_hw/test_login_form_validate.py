@@ -21,5 +21,4 @@ def test_login_form_validate(browser):
     form_page.btn_submit.click_force()  # Нажимаем на кнопку "Submit"
     time.sleep(2)
 
-    assert form_page.form.get_dom_attribute('class')# == 'was-validated'
-    # assert form_page.form_was_validated.find_element()
+    assert form_page.form.get_dom_attribute('class')

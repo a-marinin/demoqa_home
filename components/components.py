@@ -2,8 +2,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
-from selenium import webdriver  # TEMP!!!
-
 """
 В файл components.py вынесены однотипные действия с веб-элементами.
 Класс WebElement не наследуется!

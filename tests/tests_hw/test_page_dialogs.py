@@ -1,5 +1,4 @@
 from pages.modal_dialogs import ModalDialogsPage
-import time
 
 ''' Тест-файл с текст кейсами из домашнего задания №9. '''
 
